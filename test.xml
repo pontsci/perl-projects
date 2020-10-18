@@ -1,0 +1,40 @@
+<books>
+    <book >
+        <title>
+        Adventure of DBMS
+        </title>
+        <author>
+        Manson, T. B. Gill, M. K.
+        </author>
+        <publisher>
+            <name>
+            First Press
+            </name>
+            <city>
+            London
+            </city>
+        </publisher>
+        <keywords>
+        retrieval, DBMS, design, programming
+        </keywords>
+    </book>
+    <book>
+        <title>
+        AI tool kit
+        </title>
+        <author>
+        Wang, P. S. Khalid, H. S.
+        </author>
+        <publisher>
+            <name>
+            Weida Press
+            </name>
+            <city>
+            Shanghai
+            </city>
+        </publisher>
+        <keywords>
+        AI, search, knowledge
+        </keywords>
+    </book>
+</books>
