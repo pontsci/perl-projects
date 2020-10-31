@@ -1,0 +1,623 @@
+Web Server Log Analyzer v1.0raf
+
+Processed 255 entries from 1 files.
+Processed the following logfiles:
+tiny.log
+
+==============================================================================
+HOSTNAMES
+==============================================================================
+
+  Hits  %-age   Resource                                                    
+  ----  -----   --------                                                    
+     1   0.39   075-133-022-013.res.spectrum.com                            
+     1   0.39   075-142-203-234.biz.spectrum.com                            
+     2   0.78   10.12.0.111                                                 
+     2   0.78   10.12.2.45                                                  
+     6   2.35   10.12.3.33                                                  
+     1   0.39   10.8.3.19                                                   
+     3   1.18   10.8.31.49                                                  
+     1   0.39   10.8.45.57                                                  
+     1   0.39   10.8.6.151                                                  
+     1   0.39   10.8.61.30                                                  
+     1   0.39   10.8.8.214                                                  
+     1   0.39   101.59.201.244                                              
+     1   0.39   106.76.200.242                                              
+     1   0.39   107.77.89.66                                                
+     1   0.39   112.207.74.155.pldt.net                                     
+     1   0.39   116.102.142.221                                             
+     3   1.18   128.30.52.70                                                
+     4   1.57   128.30.52.71                                                
+     3   1.18   137.48.177.164                                              
+     2   0.78   137.48.177.180                                              
+     1   0.39   137.48.177.199                                              
+     1   0.39   137.48.177.209                                              
+     1   0.39   137.48.177.225                                              
+     1   0.39   137.48.177.6                                                
+     1   0.39   137.48.178.96                                               
+     1   0.39   137.48.185.149                                              
+     1   0.39   137.48.186.21                                               
+     2   0.78   137.48.251.173                                              
+     2   0.78   137.48.36.32                                                
+     1   0.39   157.55.80.72                                                
+     1   0.39   163.47.15.123                                               
+     1   0.39   164.58.218.66                                               
+     1   0.39   178.162.198.164                                             
+     1   0.39   180.191.119.159                                             
+     1   0.39   182.67.189.79                                               
+     1   0.39   188.143.232.35                                              
+     1   0.39   188.143.232.41                                              
+     1   0.39   192.161.133.162                                             
+     1   0.39   198.203.221.241                                             
+     1   0.39   2.49.95.221                                                 
+     1   0.39   203.87.139.99                                               
+     1   0.39   204.194.141.29                                              
+     1   0.39   212.39.126.106                                              
+     1   0.39   216.185.58.143                                              
+     1   0.39   45.17.01a8.ip4.static.sl-reverse.com                        
+     1   0.39   50-203-170-118-static.hfc.comcastbusiness.net               
+     1   0.39   63.147.218.195                                              
+     1   0.39   64-121-221-180.s7858.c3-0.eas-cbr2.atw-eas.pa.cable.rcncustomer.com
+     1   0.39   66.37.245.254                                               
+     1   0.39   67-3-230-141.omah.qwest.net                                 
+     1   0.39   75-163-95-231.omah.qwest.net                                
+     1   0.39   88-222-25-164.init.lt                                       
+     1   0.39   92-52-20-110.dynamic.orange.sk                              
+     1   0.39   UE216.187.digi.net.my                                       
+     1   0.39   addr-199.21.193.235.nptpop-cmts-cable-sub.rdns-bnin.net     
+     1   0.39   baiduspider-123-125-71-107.crawl.baidu.com                  
+     1   0.39   baiduspider-123-125-71-109.crawl.baidu.com                  
+     1   0.39   baiduspider-123-125-71-31.crawl.baidu.com                   
+     1   0.39   baiduspider-123-125-71-52.crawl.baidu.com                   
+     1   0.39   baiduspider-180-76-15-135.crawl.baidu.com                   
+     1   0.39   baiduspider-180-76-15-149.crawl.baidu.com                   
+     1   0.39   baiduspider-180-76-15-160.crawl.baidu.com                   
+     1   0.39   baiduspider-180-76-15-20.crawl.baidu.com                    
+     1   0.39   baiduspider-180-76-15-29.crawl.baidu.com                    
+     1   0.39   bcdff9e5.skybroadband.com                                   
+     1   0.39   c-73-188-117-54.hsd1.pa.comcast.net                         
+     1   0.39   c-75-72-0-8.hsd1.mn.comcast.net                             
+     1   0.39   cpe-173-173-5-223.hot.res.rr.com                            
+     1   0.39   cpe-212-85-173-46.cable.telemach.net                        
+     1   0.39   cpe-70-119-67-249.tx.res.rr.com                             
+     1   0.39   cpe-72-128-108-64.wi.res.rr.com                             
+     2   0.78   crawl-66-249-75-206.googlebot.com                           
+     2   0.78   dr-crab.w3.org                                              
+     3   1.18   dr-foster.w3.org                                            
+     2   0.78   dr-monroe.w3.org                                            
+     7   2.75   dr-riviera.w3.org                                           
+     4   1.57   dr-wolfe.w3.org                                             
+     1   0.39   ec2-204-236-226-210.compute-1.amazonaws.com                 
+     1   0.39   ec2-52-91-199-184.compute-1.amazonaws.com                   
+     1   0.39   gir.grickle.org                                             
+     3   1.18   google-proxy-66-102-6-232.google.com                        
+     2   0.78   google-proxy-66-102-7-230.google.com                        
+     4   1.57   google-proxy-66-102-7-237.google.com                        
+     1   0.39   google-proxy-66-249-83-156.google.com                       
+     1   0.39   google-proxy-66-249-85-159.google.com                       
+     1   0.39   google-proxy-66-249-85-165.google.com                       
+     1   0.39   h10.163.23.98.static.ip.windstream.net                      
+     2   0.78   h14.163.23.98.static.ip.windstream.net                      
+     2   0.78   h218.163.23.98.static.ip.windstream.net                     
+     1   0.39   ip-64-134-167-58.public.wayport.net                         
+     1   0.39   ip-66-87-115-251.akrnoh.spcsdns.net                         
+     1   0.39   ip174-70-47-41.om.om.cox.net                                
+     2   0.78   ip174-71-39-181.om.om.cox.net                               
+     3   1.18   ip174-71-66-98.om.om.cox.net                                
+     1   0.39   ip174-71-82-37.om.om.cox.net                                
+     2   0.78   ip174-74-3-89.om.om.cox.net                                 
+     1   0.39   ip24-252-34-223.om.om.cox.net                               
+     1   0.39   ip24-252-52-175.om.om.cox.net                               
+     3   1.18   ip68-13-0-11.om.om.cox.net                                  
+     2   0.78   ip68-13-102-1.om.om.cox.net                                 
+     2   0.78   ip68-13-121-236.om.om.cox.net                               
+     1   0.39   ip68-13-134-219.om.om.cox.net                               
+     2   0.78   ip68-13-34-34.om.om.cox.net                                 
+     2   0.78   ip68-226-58-254.om.om.cox.net                               
+     1   0.39   ip68-229-189-211.om.om.cox.net                              
+     1   0.39   ip68-96-129-197.om.om.cox.net                               
+     2   0.78   ip72-213-61-117.om.om.cox.net                               
+     1   0.39   ip98-161-57-219.om.om.cox.net                               
+     2   0.78   ip98-168-239-13.om.om.cox.net                               
+     2   0.78   ist172-marypc.ist.unomaha.edu                               
+     1   0.39   mail.campushigh.com                                         
+     1   0.39   mail.woodmen.com                                            
+    71  27.84   misldevbox.ist.unomaha.edu                                  
+     1   0.39   mobile-166-137-240-128.mycingular.net                       
+     1   0.39   msnbot-157-55-39-107.search.msn.com                         
+     1   0.39   msnbot-157-55-39-78.search.msn.com                          
+     1   0.39   msnbot-207-46-13-105.search.msn.com                         
+     1   0.39   out.kanek12.org                                             
+     1   0.39   pki153-pc00.pki.unomaha.edu                                 
+     2   0.78   pki260-pc13.pki.unomaha.edu                                 
+     1   0.39   pool-96-248-12-150.rcmdva.fios.verizon.net                  
+     1   0.39   ptr.cnsat.com.cn                                            
+     1   0.39   r167-61-0-229.dialup.adsl.anteldata.net.uy                  
+     3   1.18   sllc-02.lib.unomaha.edu                                     
+     1   0.39   static-170.6.107.27-tataidc.co.in                           
+     1   0.39   static-71-9-4-96.davidson.tn.ena.net                        
+     1   0.39   subs13-223-255-229-77.three.co.id                           
+     1   0.39   triton.jewell.edu                                           
+ -----
+   255 entries displayed
+
+
+==============================================================================
+DOMAINS
+==============================================================================
+
+  Hits  %-age   Resource                                                    
+  ----  -----   --------                                                    
+    62  24.31   DOTTED QUAD OR OTHER                                        
+     2   0.78   amazonaws.com                                               
+     9   3.53   baidu.com                                                   
+     1   0.39   campushigh.com                                              
+     1   0.39   co.id                                                       
+     1   0.39   co.in                                                       
+     1   0.39   com.cn                                                      
+     2   0.78   comcast.net                                                 
+     1   0.39   comcastbusiness.net                                         
+    30  11.76   cox.net                                                     
+     1   0.39   ena.net                                                     
+    12   4.71   google.com                                                  
+     2   0.78   googlebot.com                                               
+     1   0.39   grickle.org                                                 
+     1   0.39   init.lt                                                     
+     1   0.39   jewell.edu                                                  
+     1   0.39   kanek12.org                                                 
+     3   1.18   msn.com                                                     
+     1   0.39   mycingular.net                                              
+     1   0.39   net.my                                                      
+     1   0.39   net.uy                                                      
+     1   0.39   orange.sk                                                   
+     1   0.39   pldt.net                                                    
+     2   0.78   qwest.net                                                   
+     1   0.39   rcncustomer.com                                             
+     1   0.39   rdns-bnin.net                                               
+     3   1.18   rr.com                                                      
+     1   0.39   skybroadband.com                                            
+     1   0.39   sl-reverse.com                                              
+     1   0.39   spcsdns.net                                                 
+     2   0.78   spectrum.com                                                
+     1   0.39   telemach.net                                                
+    79  30.98   unomaha.edu                                                 
+     1   0.39   verizon.net                                                 
+    18   7.06   w3.org                                                      
+     1   0.39   wayport.net                                                 
+     5   1.96   windstream.net                                              
+     1   0.39   woodmen.com                                                 
+ -----
+   255 entries displayed
+
+
+==============================================================================
+DATES
+==============================================================================
+
+  Hits  %-age   Resource                                                    
+  ----  -----   --------                                                    
+    34  13.33   11/Oct/2020                                                 
+    83  32.55   12/Oct/2020                                                 
+    68  26.67   13/Oct/2020                                                 
+    70  27.45   14/Oct/2020                                                 
+ -----
+   255 entries displayed
+
+
+==============================================================================
+HOURS
+==============================================================================
+
+  Hits  %-age   Resource                                                    
+  ----  -----   --------                                                    
+     5   1.96   00                                                          
+     5   1.96   01                                                          
+     1   0.39   02                                                          
+     4   1.57   03                                                          
+     1   0.39   04                                                          
+     4   1.57   05                                                          
+     3   1.18   06                                                          
+     1   0.39   07                                                          
+     9   3.53   08                                                          
+     7   2.75   09                                                          
+     8   3.14   10                                                          
+    21   8.24   11                                                          
+    19   7.45   12                                                          
+    18   7.06   13                                                          
+    24   9.41   14                                                          
+    13   5.10   15                                                          
+    11   4.31   16                                                          
+    14   5.49   17                                                          
+    14   5.49   18                                                          
+    11   4.31   19                                                          
+    19   7.45   20                                                          
+    16   6.27   21                                                          
+    16   6.27   22                                                          
+    11   4.31   23                                                          
+ -----
+   255 entries displayed
+
+
+==============================================================================
+STATUS CODES
+==============================================================================
+
+  Hits  %-age   Resource                                                    
+  ----  -----   --------                                                    
+   208  81.57   200                                                         
+     7   2.75   301                                                         
+    27  10.59   304                                                         
+     3   1.18   403                                                         
+     9   3.53   404                                                         
+     1   0.39   416                                                         
+ -----
+   255 entries displayed
+
+
+==============================================================================
+URLS
+==============================================================================
+
+  Hits  %-age   Resource                                                    
+  ----  -----   --------                                                    
+    14   5.49   /                                                           
+     1   0.39   /1300/                                                      
+     1   0.39   /1300/examples/0507.html                                    
+     1   0.39   /apple-touch-icon-120x120-precomposed.png                   
+     1   0.39   /apple-touch-icon.png                                       
+     1   0.39   /css/reset-fonts-grids.css                                  
+     8   3.14   /favicon.ico                                                
+     1   0.39   /nice%20ports%2C/Tri%6Eity.txt%2ebak                        
+     2   0.78   /robots.txt                                                 
+     1   0.39   /~aaahmed/1444794512+1364.php                               
+     4   1.57   /~aaahmed/a6/pagethree.html                                 
+     1   0.39   /~aalrebeh/                                                 
+     1   0.39   /~acreekmore/a7                                             
+     1   0.39   /~ambermakovicka/a8/index.html                              
+     1   0.39   /~amcneese/a5/                                              
+     1   0.39   /~asalinas/1444868856+3268.php                              
+     1   0.39   /~asalinas/a7/pagethree.html                                
+     1   0.39   /~asalinas/a8/pagetwo.html                                  
+     4   1.57   /~avwood/project/                                           
+     1   0.39   /~awehr/a8/index.html                                       
+     1   0.39   /~bcorwin/1444669594+1925.php                               
+     1   0.39   /~bcorwin/a4/index.html                                     
+     1   0.39   /~bcorwin/a6/pagetwo.html                                   
+     1   0.39   /~cbharris/                                                 
+     1   0.39   /~cbuus/                                                    
+     1   0.39   /~cbuus/1444582530+16936.php                                
+     1   0.39   /~cbuus/1444583804+27583.php                                
+     1   0.39   /~cdolson/images/Dez.png                                    
+     1   0.39   /~codybarrett/a1/                                           
+     1   0.39   /~corycopeland/a6/index.html                                
+     1   0.39   /~cpuls/                                                    
+     1   0.39   /~criganti/a7/index.html                                    
+     1   0.39   /~criganti/a8/index.html                                    
+     1   0.39   /~ctessier/1444788733+26939.cgi                             
+     1   0.39   /~ctessier/1444792609+19518.php                             
+     1   0.39   /~ctessier/a6/index.html                                    
+     1   0.39   /~dbanka/project2/css/form.css                              
+     1   0.39   /~devashishneupane/1444688034+24297.php                     
+     1   0.39   /~dkissner/                                                 
+     1   0.39   /~dmasada/                                                  
+     1   0.39   /~dmasada/a2                                                
+     1   0.39   /~dpatten/                                                  
+     1   0.39   /~drwilson/1444848630+9598.php                              
+     3   1.18   /~drwilson/a8/                                              
+     1   0.39   /~eprice/a8/pagetwo.html                                    
+     1   0.39   /~ericalopez/1444744551+30375.php                           
+     1   0.39   /~ericalopez/a5/pagethree.html                              
+     2   0.78   /~ericalopez/a6/index.html                                  
+     1   0.39   /~evincent/1444798115+25508.php                             
+     1   0.39   /~ganderson01/a7                                            
+     2   0.78   /~gsilva/a8/index.html                                      
+     1   0.39   /~gsilva/a8/my.css                                          
+     1   0.39   /~gsilva/a8/pagethree.html                                  
+     1   0.39   /~gtimmins/index.html                                       
+     1   0.39   /~harohwer/                                                 
+     1   0.39   /~jajepsen/a6/index.html                                    
+     1   0.39   /~jbarton/a8/                                               
+     1   0.39   /~jbarton/a8/pagethree                                      
+     1   0.39   /~jblackmore/                                               
+     1   0.39   /~jblackmore/blizz/tehsux.html                              
+     1   0.39   /~jdike/a5                                                  
+     1   0.39   /~jdike/a5/                                                 
+     1   0.39   /~jdike/a6/                                                 
+     1   0.39   /~jdike/a6/index.html                                       
+     1   0.39   /~jeffreyasmith/                                            
+     1   0.39   /~jeffreyasmith/1444876440+29562.php                        
+     1   0.39   /~jeffreyasmith/1444877633+22308.php                        
+     1   0.39   /~jeffreyasmith/1444878839+4610.php                         
+     1   0.39   /~jeffreyasmith/1444879939+15942.php                        
+     1   0.39   /~jeffreyasmith/a8/css/my.css                               
+     1   0.39   /~jeffreyasmith/a8/index.html                               
+     1   0.39   /~jeffreyasmith/a8/pagetwo.html                             
+     1   0.39   /~jgschultz/a8/pagethree.html                               
+     3   1.18   /~jkorbitz/                                                 
+     1   0.39   /~jkorbitz/1444774158+25748.cgi                             
+     1   0.39   /~jkorbitz/1444774796+27422.cgi                             
+     1   0.39   /~jkorbitz/1444837878+20124.php                             
+     1   0.39   /~jkorbitz/1444838311+23754.php                             
+     1   0.39   /~jkorbitz/1444839010+3806.php                              
+     1   0.39   /~jkorbitz/1444839276+13340.cgi                             
+     1   0.39   /~jkorbitz/1444839515+24473.cgi                             
+     1   0.39   /~jladrondeguevara/1444765242+1027.php                      
+     3   1.18   /~jma01/project/                                            
+     1   0.39   /~jnallou/1444787837+22947.php                              
+     1   0.39   /~jonishaw/                                                 
+     2   0.78   /~jonishaw/index7.html                                      
+     2   0.78   /~jpfeifer/                                                 
+     1   0.39   /~jpfeifer/1444676799+2755.cgi                              
+     1   0.39   /~jpfeifer/a8/pagethree.html                                
+     1   0.39   /~jpfeifer/pagetwo-a7.html                                  
+     1   0.39   /~jpgibson/pp2015/                                          
+     1   0.39   /~jramirez03/                                               
+     1   0.39   /~jramirez03/1444791585+32458.php                           
+     1   0.39   /~jramirez03/1444791924+7683.cgi                            
+     3   1.18   /~jtrimm/project/3x3.html                                   
+    10   3.92   /~jtrimm/project/4x4.html                                   
+     2   0.78   /~jtrimm/project/css/cubestyle.css                          
+     1   0.39   /~jtrimm/project/css/normalize.css                          
+     1   0.39   /~jtrimm/project/images/2lookPLLParity.png                  
+     1   0.39   /~jtrimm/project/images/Rr.png                              
+     1   0.39   /~jtrimm/project/images/background.png                      
+     1   0.39   /~jtrimm/project/images/basicmethodparityadj.png            
+     1   0.39   /~jtrimm/project/images/basicmethodparitydiag.png           
+     6   2.35   /~jtrimm/project/images/corneralgcases.png                  
+     1   0.39   /~jtrimm/project/images/cornerplug.png                      
+     1   0.39   /~jtrimm/project/images/messedupedges.png                   
+     2   0.78   /~jtrimm/project/images/r.png                               
+     2   0.78   /~jtrimm/project/images/toplayercases.png                   
+     3   1.18   /~jtrimm/project/images/turnnotation.png                    
+     2   0.78   /~jtrimm/project/ollpll.html                                
+     1   0.39   /~jtrimm/project/quiz.html                                  
+     5   1.96   /~kbushara/                                                 
+     1   0.39   /~kbushara/1444701348+9438.php                              
+     1   0.39   /~kbushara/1444779144+2663.php                              
+     1   0.39   /~kbushara/1444784646+27332.php                             
+     1   0.39   /~kbushara/1444789916+24536.php                             
+     1   0.39   /~kbushara/a6                                               
+     1   0.39   /~kbushara/a6/                                              
+     2   0.78   /~kbushara/a6/pagethree.html                                
+     3   1.18   /~kgomes/                                                   
+     1   0.39   /~kgomes/1444691865+2220.php                                
+     2   0.78   /~kgomes/a8/index.html                                      
+     1   0.39   /~klodonou/1444785342+13903.php                             
+     1   0.39   /~klodonou/a8/pagethree.html                                
+     1   0.39   /~klodonou/a8/pagetwo.html                                  
+     1   0.39   /~kmcalpine/                                                
+     1   0.39   /~kslump/                                                   
+     1   0.39   /~kslump/1444658569+9040.cgi                                
+     1   0.39   /~lastewart/1444769984+1174.cgi                             
+     1   0.39   /~lastewart/1444866498+6971.php                             
+     1   0.39   /~lastewart/1444867255+4028.php                             
+     2   0.78   /~lastewart/a8/css/my.css                                   
+     1   0.39   /~mbahle/                                                   
+     1   0.39   /~mbahle/1444617551+7093.cgi                                
+     1   0.39   /~mbahle/1444698846+2579.php                                
+     1   0.39   /~mbahle/1444700306+2508.cgi                                
+     1   0.39   /~mbahle/1444700862+20089.cgi                               
+     2   0.78   /~mcorron/                                                  
+     1   0.39   /~mcorron/1444580376+14370.php                              
+     1   0.39   /~mepittman/project/css/my.css                              
+     1   0.39   /~mgagne                                                    
+     3   1.18   /~mjones/                                                   
+     1   0.39   /~mjones/1444852860+26639.cgi                               
+     1   0.39   /~mjones/public_html/a7                                     
+     1   0.39   /~mlucks/1444586598+24069.php                               
+     1   0.39   /~mlucks/1444680561+16494.php                               
+     1   0.39   /~mlucks/1444681134+5639.php                                
+     1   0.39   /~mokalebo/a5/                                              
+     1   0.39   /~mokalebo/a6/pagethree.html                                
+     1   0.39   /~msalharthi                                                
+     1   0.39   /~mwoosley/1444848144+15444.cgi                             
+     1   0.39   /~mwoosley/a7/pagethree.html                                
+     1   0.39   /~nargesst/a6/index.html                                    
+     1   0.39   /~nmschulte/autocheck/1HGCB7285PA801354.pdf                 
+     1   0.39   /~oleatherman/a1/                                           
+     1   0.39   /~osaha/                                                    
+     1   0.39   /~osaha/1444677828+9390.cgi                                 
+     1   0.39   /~osaha/1444678245+17378.cgi                                
+     1   0.39   /~osaha/layout-test12.html                                  
+     1   0.39   /~osaha/layout-test4.html                                   
+     1   0.39   /~osaha/layout-test7.html                                   
+     1   0.39   /~pcavanaugh/CSCI1620Lectures/Lecture10RecursionII.mp4      
+     1   0.39   /~pcavanaugh/CSCI1620Lectures/Lecture12ArrayList.mp4        
+     1   0.39   /~pcavanaugh/CSCI1620Lectures/Lecture8ExceptionsII.mp4      
+     2   0.78   /~pcavanaugh/CSCI1620Lectures/Lecture9RecursionI.mp4        
+     1   0.39   /~pcavanaugh/CSCI1620Lectures/LectureSyllabus.mp4           
+     1   0.39   /~pcavanaugh/CSCI2240Lectures/Lecture12.mp4                 
+     1   0.39   /~rbachle/                                                  
+     1   0.39   /~rgutierrez/                                               
+     1   0.39   /~rsjacob/1444790463+32483.cgi                              
+     1   0.39   /~rsjacob/a7/                                               
+     1   0.39   /~rzubke/a5/                                                
+     1   0.39   /~salmutairi/a7/                                            
+     1   0.39   /~sjacobs                                                   
+     2   0.78   /~slintner/a6/                                              
+     1   0.39   /~ssilverman/                                               
+     1   0.39   /~talonramsey/quiz.html                                     
+     1   0.39   /~tcook/                                                    
+     1   0.39   /~tflud/a4/                                                 
+     2   0.78   /~tschuele/a8/pagethree.html                                
+     1   0.39   /~zxiao/                                                    
+ -----
+   255 entries displayed
+
+
+==============================================================================
+FILE TYPES
+==============================================================================
+
+  Hits  %-age   Resource                                                    
+  ----  -----   --------                                                    
+    17   6.67   CGI Program (cgi)                                           
+    31  12.16   Image (jpg,jpeg,gif,ico,png)                                
+   133  52.16   Other                                                       
+    10   3.92   Style Sheet (CSS)                                           
+    64  25.10   Web Pages (htm,html)                                        
+ -----
+   255 entries displayed
+
+
+==============================================================================
+BROWSERS
+==============================================================================
+
+  Hits  %-age   Resource                                                    
+  ----  -----   --------                                                    
+     1   0.39   FARSIGHTED50_12864_11B_HW (MRE\\2.5.00(3072) resolution\\240320 chipset\\MT6250 touch\\1 tpannel\\1 camera\\1 gsensor\\0 keyboard\\reduced) P881_LH04_P04_V0.6 Release/2012.11.27 WAP Browser/MAUI (HTTP PGDL; HTTPS) Profile/  Q03C1-2.40 en-US
+     8   3.14   Google favicon                                              
+     7   2.75   Jigsaw/2.3.0 W3C_CSS_Validator_JFouffa/2.0 (See <http://validator.w3.org/services>)
+     1   0.39   MobileSafari/600.1.4 CFNetwork/711.4.6 Darwin/14.0.0        
+     1   0.39   MobileSafari/601.1 CFNetwork/758.0.2 Darwin/15.0.0          
+     2   0.78   Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1)     
+     1   0.39   Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/7.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E; InfoPath.3; ms-office)
+     2   0.78   Mozilla/4.0 (compatible;)                                   
+     3   1.18   Mozilla/5.0 (Linux; Android 4.2.1; en-us; Nexus 5 Build/JOP40D) AppleWebKit/535.19 (KHTML, like Gecko; googleweblight) Chrome/38.0.1025.166 Mobile Safari/535.19
+     1   0.39   Mozilla/5.0 (Linux; Android 4.2.2; NX785QC8G Build/JDQ39) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.94 Safari/537.36
+     1   0.39   Mozilla/5.0 (Linux; Android 4.2.2; SM-T111 Build/JDQ39) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.109 Safari/537.36
+     1   0.39   Mozilla/5.0 (Linux; Android 4.4.2; SM-P601 Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.141 Safari/537.36
+     1   0.39   Mozilla/5.0 (Linux; Android 4.4.4; SM-A300F Build/KTU84P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.135 Mobile Safari/537.36
+     1   0.39   Mozilla/5.0 (Linux; Android 5.0; SM-G900FD Build/LRX21T; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/43.0.2357.121 Mobile Safari/537.36 GSA/4.8.12.19.arm
+     1   0.39   Mozilla/5.0 (Linux; Android 5.1; XT1033 Build/LPB23.13-56) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.133 Mobile Safari/537.36
+     1   0.39   Mozilla/5.0 (Linux; Android 5.1; XT1034 Build/LPB23.13-58; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/45.0.2454.95 Mobile Safari/537.36 GSA/5.3.26.19.arm
+     1   0.39   Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MPA44I) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.94 Mobile Safari/537.36
+     1   0.39   Mozilla/5.0 (Linux; Android 6.0; Nexus 6 Build/MRA58K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.94 Mobile Safari/537.36
+     1   0.39   Mozilla/5.0 (Linux; U; Android 4.2.2; en-gb; QL73 Build/JDQ39) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Safari/534.30 GSA/5.3.26.16.arm
+     1   0.39   Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:40.0) Gecko/20100101 Firefox/40.0
+     1   0.39   Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10) AppleWebKit/600.1.25 (KHTML, like Gecko) Version/8.0 Safari/600.1.25
+     1   0.39   Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/600.1.25 (KHTML, like Gecko) Version/8.0 Safari/600.1.25
+     1   0.39   Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36
+     1   0.39   Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/600.5.17 (KHTML, like Gecko) Version/8.0.5 Safari/600.5.17
+     4   1.57   Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/600.6.3 (KHTML, like Gecko) Version/8.0.6 Safari/600.6.3
+     2   0.78   Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36
+     3   1.18   Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit/600.8.9 (KHTML, like Gecko) Version/7.1.8 Safari/537.85.17
+     1   0.39   Mozilla/5.0 (MeeGo; NokiaN9) AppleWebKit/534.13 (KHTML, like Gecko) NokiaBrowser/8.5.0 Mobile Safari/534.13
+     1   0.39   Mozilla/5.0 (Mobile; Windows Phone 8.1; Android 4.0; ARM; Trident/7.0; Touch; rv:11.0; IEMobile/11.0; NOKIA; Lumia 1320) like iPhone OS 7_0_3 Mac OS X AppleWebKit/537 (KHTML, like Gecko) Mobile Safari/537
+     1   0.39   Mozilla/5.0 (Mobile; Windows Phone 8.1; Android 4.0; ARM; Trident/7.0; Touch; rv:11.0; IEMobile/11.0; NOKIA; Lumia 520) like iPhone OS 7_0_3 Mac OS X AppleWebKit/537 (KHTML, like Gecko) Mobile Safari/537
+     1   0.39   Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240
+    16   6.27   Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36
+     3   1.18   Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.71 Safari/537.36
+     2   0.78   Mozilla/5.0 (Windows NT 10.0; WOW64; rv:41.0) Gecko/20100101 Firefox/41.0
+     6   2.35   Mozilla/5.0 (Windows NT 5.1; rv:6.0.2) Gecko/20100101 Firefox/6.0.2
+     5   1.96   Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36
+     8   3.14   Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.125 Safari/537.36
+     1   0.39   Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.122 Safari/537.36
+     1   0.39   Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.155 Safari/537.36
+     8   3.14   Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36
+     2   0.78   Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
+     1   0.39   Mozilla/5.0 (Windows NT 6.1; WOW64; rv:14.0) Gecko/20100101 Firefox/14.0.1
+     2   0.78   Mozilla/5.0 (Windows NT 6.1; WOW64; rv:30.0) Gecko/20100101 Firefox/30.0
+     1   0.39   Mozilla/5.0 (Windows NT 6.1; WOW64; rv:33.0) Gecko/20100101 Firefox/33.0
+     2   0.78   Mozilla/5.0 (Windows NT 6.1; WOW64; rv:40.0) Gecko/20100101 Firefox/40.0
+     1   0.39   Mozilla/5.0 (Windows NT 6.1; WOW64; rv:41.0) Gecko/20100101 Firefox/41.0
+     1   0.39   Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.118 Safari/537.36
+     1   0.39   Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.0.10338 Safari/537.36
+     3   1.18   Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.155 Safari/537.36
+    17   6.67   Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36
+     3   1.18   Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; Touch; rv:11.0) like Gecko
+     1   0.39   Mozilla/5.0 (Windows NT 6.3; WOW64; rv:31.0) Gecko/20100101 Firefox/31.0
+     4   1.57   Mozilla/5.0 (Windows NT 6.3; WOW64; rv:41.0) Gecko/20100101 Firefox/41.0
+     1   0.39   Mozilla/5.0 (X11; CrOS x86_64 7262.57.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.98 Safari/537.36
+     1   0.39   Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:41.0) Gecko/20100101 Firefox/41.0
+     4   1.57   Mozilla/5.0 (compatible; Baiduspider/2.0; +http://www.baidu.com/search/spider.html)
+     1   0.39   Mozilla/5.0 (compatible; GoogleDocs; documents; +http://docs.google.com)
+     2   0.78   Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)
+     1   0.39   Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)
+     1   0.39   Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)
+     1   0.39   Mozilla/5.0 (iPad; CPU OS 8_4_1 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12H321 Safari/600.1.4
+     1   0.39   Mozilla/5.0 (iPhone; CPU iPhone OS 7_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Version/7.0 Mobile/11A465 Safari/9537.53 (compatible; bingbot/2.0;  http://www.bing.com/bingbot.htm)
+     1   0.39   Mozilla/5.0 (iPhone; CPU iPhone OS 9_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) CriOS/45.0.2454.89 Mobile/13A452 Safari/600.1.4
+     1   0.39   Mozilla/5.0 (iPhone; CPU iPhone OS 9_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) GSA/8.0.57838 Mobile/13A452 Safari/600.1.4
+     3   1.18   Mozilla/5.0 (iPhone; CPU iPhone OS 9_0_2 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13A452 Safari/601.1
+     1   0.39   NO BROWSER ID                                               
+    11   4.31   Validator.nu/LV http://validator.w3.org/services            
+     7   2.75   W3C_Validator/1.3 http://validator.w3.org/services          
+     1   0.39   WeSEE                                                       
+    71  27.84   curl/7.22.0 (x86_64-pc-linux-gnu) libcurl/7.22.0 OpenSSL/1.0.1 zlib/1.2.3.4 libidn/1.23 librtmp/2.3
+     1   0.39   curl/7.43.0                                                 
+     1   0.39   ia_archiver                                                 
+     1   0.39   msnbot-media/1.1 (+http://search.msn.com/msnbot.htm)        
+ -----
+   255 entries displayed
+
+
+==============================================================================
+BROWSER FAMILIES
+==============================================================================
+
+  Hits  %-age   Resource                                                    
+  ----  -----   --------                                                    
+    81  31.76   Chrome                                                      
+    22   8.63   Firefox                                                     
+     4   1.57   MSIE                                                        
+    23   9.02   Safari                                                      
+   125  49.02   Unknown                                                     
+ -----
+   255 entries displayed
+
+
+==============================================================================
+REFERRERS
+==============================================================================
+
+  Hits  %-age   Resource                                                    
+  ----  -----   --------                                                    
+   225  88.24   NO REFERER                                                  
+     1   0.39   http://games.espn.go.com/ffl/boxscorequick?leagueId=46863&teamId=6&scoringPeriodId=5&seasonId=2015&view=scoringperiod&version=quick
+     1   0.39   http://www.google.co.id/                                    
+     1   0.39   http://www.google.co.in/search?hl=en-GB&redir_esc=&client=ms-android-samsung&source=android-search-app&v=133247963&qsubts=1293929734983&q=cube+solve+4x4&v=133247963
+     1   0.39   http://www.google.co.in/search?q=rubik+cube+4*4+matching&btnG=Search
+     1   0.39   http://www.google.com.au/blank.html                         
+     1   0.39   https://www.bing.com/search?q=cach%20xoay%20rubic%20%204-4-4&input=5&form=MB1014&mkt=vi-VN&setlang=vi-VN
+     1   0.39   https://www.bing.com/search?q=crossed%20corners%20in%20cube%204x4&pivot=web&persona=0&input=1&form=SBCLIK2&mkt=en-US&setlang=en-US
+     1   0.39   https://www.google.ae/                                      
+     3   1.18   https://www.google.co.in/                                   
+     1   0.39   https://www.google.co.in/search?q=four+by+four+rubik%27s+cube&client=ms-android-samsung&hl=en-GB&source=android-browser-suggest&ei=Di8bVqq4EsefuQTi37LYAQ&start=10&sa=N
+     2   0.78   https://www.google.com                                      
+     1   0.39   https://www.google.com.ph/                                  
+     1   0.39   https://www.google.com.uy/                                  
+    13   5.10   https://www.google.com/                                     
+     1   0.39   https://www.google.sk/                                      
+ -----
+   255 entries displayed
+
+
+==============================================================================
+REFERRERS' DOMAINS
+==============================================================================
+
+  Hits  %-age   Resource                                                    
+  ----  -----   --------                                                    
+   225  88.24   NONE                                                        
+     2   0.78   bing.com                                                    
+     1   0.39   co.id                                                       
+     6   2.35   co.in                                                       
+     1   0.39   com.au                                                      
+     1   0.39   com.ph                                                      
+     1   0.39   com.uy                                                      
+     1   0.39   go.com                                                      
+     1   0.39   google.ae                                                   
+    15   5.88   google.com                                                  
+     1   0.39   google.sk                                                   
+ -----
+   255 entries displayed
+
+
+==============================================================================
+OPERATING SYSTEMS
+==============================================================================
+
+  Hits  %-age   Resource                                                    
+  ----  -----   --------                                                    
+    85  33.33   Linux                                                       
+    21   8.24   Macintosh                                                   
+    53  20.78   Other                                                       
+    96  37.65   Windows                                                     
+ -----
+   255 entries displayed
+
+
+Total bytes served    = 475180979
+
