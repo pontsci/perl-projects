@@ -8,6 +8,7 @@ if($argvLength == 0){
     exit(0);
 }
 
+my %dates;
 my %hours;
 my %statuses;
 my %urls;
@@ -18,15 +19,24 @@ my %operatingSystems;
 my $regex = '(?<IP>\d+\.\d+\.\d+\.\d+)\s+-+\s+-+\s+\[(?<date>\d+\/\w{3}\/\d{4}):(?<hour>\d{2}):\d{2}:\d{2} -\d{4}\] "\S+\s+(?<URL>\S+).*?"\s+(?<status>\d{3})\s+(?<bytes>\d+)\s+"(?<referer>\S+?)"\s+"(?<useragent>.*?)"';
 while(<ARGV>){
     $_ =~ /$regex/g;
+
+    #setup dates hash
+    my $date = $+{date};
+    $dates{$date}++;
+
+    #setup hours hash
     my $hour = $+{hour};
     $hours{$hour}++;
 
+    #setup statuses hash
     my $status = $+{status};
     $statuses{$status}++;
 
+    #setup urls hash
     my $url = $+{URL};
     $urls{$url}++;
 
+    #setup useragents hash
     my $useragent = $+{useragent};
     if($useragent eq "-"){
         $useragents{"NO BROWSER ID"}++;
@@ -36,7 +46,6 @@ while(<ARGV>){
         $useragents{$useragent}++;
     }
 
-    
     #setup browserFamilies hash
     given(lc $useragent){
         when(/chrome/){
@@ -59,8 +68,8 @@ while(<ARGV>){
         }
     }
 
-    my $operatingSystem = $+{useragent};
     #setup operatingSystems hash
+    my $operatingSystem = $+{useragent};
     given(lc $operatingSystem){
         when(/linux/){
             $operatingSystems{"Linux"}++;
@@ -75,8 +84,9 @@ while(<ARGV>){
             $operatingSystems{"Other"}++;
         }
     }
-
 }
+my $datesPrint = getHashString(\%dates, "DATES");
+say "$datesPrint\n\n";
 my $hoursPrint = getHashString(\%hours, "HOURS");
 say "$hoursPrint\n\n";
 my $statusPrint = getHashString(\%statuses, "STATUS CODES");
@@ -90,6 +100,22 @@ say "$browserFamilyPrint\n\n";
 my $operatingSystemsPrint = getHashString(\%operatingSystems, "OPERATING SYSTEMS");
 say "$operatingSystemsPrint\n\n";
 
+open(RESULT, "> output.results");
+my $datesPrint = getHashString(\%dates, "DATES");
+say RESULT "$datesPrint\n\n";
+my $hoursPrint = getHashString(\%hours, "HOURS");
+say RESULT "$hoursPrint\n\n";
+my $statusPrint = getHashString(\%statuses, "STATUS CODES");
+say RESULT "$statusPrint\n\n";
+my $urlPrint = getHashString(\%urls, "URLS");
+say RESULT "$urlPrint\n\n";
+my $useragentPrint = getHashString(\%useragents, "BROWSERS");
+say RESULT "$useragentPrint\n\n";
+my $browserFamilyPrint = getHashString(\%browserFamilies, "BROWSER FAMILIES");
+say RESULT "$browserFamilyPrint\n\n";
+my $operatingSystemsPrint = getHashString(\%operatingSystems, "OPERATING SYSTEMS");
+say RESULT "$operatingSystemsPrint\n\n";
+
 #given a hash and its title, build a string for it and return it
 sub getHashString{
     my $hashRef = $_[0];
@@ -102,7 +128,7 @@ sub getHashString{
     my $hashString;
 
     #sort here, is there a better way than this if? probably.
-    if($title eq "HOURS" || $title eq "STATUS CODES" || $title eq "URLS" || $title eq "BROWSERS" || $title eq "BROWSER FAMILIES" || $title eq "OPERATING SYSTEMS"){
+    if($title eq "DATES" || $title eq "HOURS" || $title eq "STATUS CODES" || $title eq "URLS" || $title eq "BROWSERS" || $title eq "BROWSER FAMILIES" || $title eq "OPERATING SYSTEMS"){
         @keys = sort {$a cmp $b} @keys;
     }
 
