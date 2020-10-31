@@ -85,6 +85,7 @@ while(<ARGV>){
         }
     }
 }
+#print it
 my $datesPrint = getHashString(\%dates, "DATES");
 say "$datesPrint\n\n";
 my $hoursPrint = getHashString(\%hours, "HOURS");
@@ -100,6 +101,7 @@ say "$browserFamilyPrint\n\n";
 my $operatingSystemsPrint = getHashString(\%operatingSystems, "OPERATING SYSTEMS");
 say "$operatingSystemsPrint\n\n";
 
+#write it
 open(RESULT, "> output.results");
 my $datesPrint = getHashString(\%dates, "DATES");
 say RESULT "$datesPrint\n\n";
