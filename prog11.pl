@@ -211,7 +211,7 @@ while (<ARGV>) {
 #write it to the file
 #could this be cleaned up? for sure. I could probably
 #loop through an array of hashes...
-open( RESULT, "> output.results" );
+open( RESULT, "> mgfleming.results" );
 say RESULT ("Web Server Log Analyzer\n");
 printf RESULT ( "Process %d entries from %d files.\n", $count, $argvLength );
 printf RESULT ("Processed the following logfiles:\n");
