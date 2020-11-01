@@ -233,6 +233,7 @@ my $operatingSystemsPrint =
   getHashString( \%operatingSystems, "OPERATING SYSTEMS" );
 say RESULT "$operatingSystemsPrint\n\n";
 printf RESULT ( "Total bytes served    = %d\n\n", $bytesTotal );
+close(RESULT);
 
 #given a hash and its title, build a string for it and return it
 sub getHashString {
