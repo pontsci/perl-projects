@@ -5,16 +5,19 @@ use Net::hostent;
 
 my $argvLength = @ARGV;
 
+#exit if no args
 if ( $argvLength == 0 ) {
     printf "usage: %s log1 [log2 ...]\n", $0;
     exit(0);
 }
 
+#get the file names
 my @fileNames;
 foreach my $arg (@ARGV) {
     push @fileNames, $arg;
 }
 
+#declare hashes
 my %hostsToNames;
 my %hostnames;
 my %domains;
@@ -28,19 +31,29 @@ my %browserFamilies;
 my %referrers;
 my %referrerDomains;
 my %operatingSystems;
+
+#for stroing bytes total
 my $bytesTotal = 0;
+
+#the regex
 my $regex =
 '(?<IP>\d+\.\d+\.\d+\.\d+)\s+-+\s+-+\s+\[(?<date>\d+\/\w{3}\/\d{4}):(?<hour>\d{2}):\d{2}:\d{2} -\d{4}\] "\S+\s+(?<URL>\S+).*?"\s+(?<status>\d{3})\s+(?<bytes>\d+)\s+"(?<referrer>\S+?)"\s+"(?<useragent>.*?)"';
-my $count = 0;
 
+#iteration counting
+my $count = 0;
 #line by line, add to the values within all the hashes with the given input
 while (<ARGV>) {
-    printf( "Iteration: %d\n", ++$count );
+    #for iteration counting prints, comment out $count++ and uncomment the printf line
+    $count++;
+    #printf( "Iteration: %d\n", ++$count );
+
+    #perform the regex on the line
     $_ =~ /$regex/g;
 
     #sum up the bytes
     $bytesTotal += $+{bytes};
 
+    #the host is the IP
     my $host = $+{IP};
 
     # $name will be where we store the name; we initialize it to the ip address
@@ -48,15 +61,12 @@ while (<ARGV>) {
 
     #if I haven't seen this host, create an entry for it containing its name
     if ( !defined $hostsToNames{$host} ) {
-
         # Now we set $name to the hostname if the lookup (gethost) succeeds
         if ( my $h = gethost($host) ) {
             $name = $h->name();
         }
         $hostsToNames{$host} = "$name";
         $hostnames{$name}++;
-
-        #print "$host has a hostname of $name\n";
     }
     else {
         #if I have seen this host before, get its name
@@ -69,7 +79,7 @@ while (<ARGV>) {
         $domains{"DOTTED QUAD OR OTHER"}++;
     }
     else {
-#split up the string on "." then put together the last two items to create the domain
+    #split up the string on "." then put together the last two items to create the domain
         my @nameSplit        = split( /\./, $hostsToNames{$host} );
         my $firstPartDomain  = $nameSplit[ $#nameSplit - 1 ];
         my $secondPartDomain = $nameSplit[$#nameSplit];
@@ -97,6 +107,7 @@ while (<ARGV>) {
     my $fileType  = $+{URL};
     my @typeArray = split( /\./, $fileType );
 
+    #I did some experimenting on using regex vs traditional comparisons. I haven't found a difference so far.
     if ( @typeArray == 1 ) {
         $fileTypes{"Other"}++;
     }
@@ -129,7 +140,7 @@ while (<ARGV>) {
         $useragents{$useragent}++;
     }
 
-    #setup browserFamilies hash
+    #setup browserFamilies hash, with some given when experimentation
     given ( lc $useragent ) {
         when (/chrome/) {
             $browserFamilies{"Chrome"}++;
@@ -179,7 +190,7 @@ while (<ARGV>) {
         $referrerDomains{$referrerDomain}++;
     }
 
-    #setup operatingSystems hash
+    #setup operatingSystems hash, more given when experimentation
     my $operatingSystem = $+{useragent};
     given ( lc $operatingSystem ) {
         when (/linux/) {
@@ -197,7 +208,9 @@ while (<ARGV>) {
     }
 }
 
-#write it
+#write it to the file
+#could this be cleaned up? for sure. I could probably
+#loop through an array of hashes...
 open( RESULT, "> output.results" );
 say RESULT ("Web Server Log Analyzer\n");
 printf RESULT ( "Process %d entries from %d files.\n", $count, $argvLength );
