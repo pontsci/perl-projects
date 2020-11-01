@@ -1,13 +1,23 @@
 #!/usr/bin/env perl
 use Modern::Perl;
 use experimental 'smartmatch';
+use Net::hostent;
 
 my $argvLength = @ARGV;
+
 if ( $argvLength == 0 ) {
     printf "usage: %s log1 [log2 ...]\n", $0;
     exit(0);
 }
 
+my @fileNames;
+foreach my $arg (@ARGV) {
+    push @fileNames, $arg;
+}
+
+my %hostsToNames;
+my %hostnames;
+my %domains;
 my %dates;
 my %hours;
 my %statuses;
@@ -15,15 +25,57 @@ my %urls;
 my %fileTypes;
 my %useragents;
 my %browserFamilies;
+my %referrers;
+my %referrerDomains;
 my %operatingSystems;
+my $bytesTotal = 0;
 my $regex =
-'(?<IP>\d+\.\d+\.\d+\.\d+)\s+-+\s+-+\s+\[(?<date>\d+\/\w{3}\/\d{4}):(?<hour>\d{2}):\d{2}:\d{2} -\d{4}\] "\S+\s+(?<URL>\S+).*?"\s+(?<status>\d{3})\s+(?<bytes>\d+)\s+"(?<referer>\S+?)"\s+"(?<useragent>.*?)"';
-my $count = 1;
+'(?<IP>\d+\.\d+\.\d+\.\d+)\s+-+\s+-+\s+\[(?<date>\d+\/\w{3}\/\d{4}):(?<hour>\d{2}):\d{2}:\d{2} -\d{4}\] "\S+\s+(?<URL>\S+).*?"\s+(?<status>\d{3})\s+(?<bytes>\d+)\s+"(?<referrer>\S+?)"\s+"(?<useragent>.*?)"';
+my $count = 0;
 
+#line by line, add to the values within all the hashes with the given input
 while (<ARGV>) {
-
-    #printf("Iteration: %d\n", $count++);
+    printf( "Iteration: %d\n", ++$count );
     $_ =~ /$regex/g;
+
+    #sum up the bytes
+    $bytesTotal += $+{bytes};
+
+    my $host = $+{IP};
+
+    # $name will be where we store the name; we initialize it to the ip address
+    my $name = $host;
+
+    #if I haven't seen this host, create an entry for it containing its name
+    if ( !defined $hostsToNames{$host} ) {
+
+        # Now we set $name to the hostname if the lookup (gethost) succeeds
+        if ( my $h = gethost($host) ) {
+            $name = $h->name();
+        }
+        $hostsToNames{$host} = "$name";
+        $hostnames{$name}++;
+
+        #print "$host has a hostname of $name\n";
+    }
+    else {
+        #if I have seen this host before, get its name
+        #printf( "Seen! %s has a name of: %s\n", $host, $hostsToNames{$host} );
+        $hostnames{ $hostsToNames{$host} }++;
+    }
+
+    #names are the same so there is no host name
+    if ( $hostsToNames{$host} eq $host ) {
+        $domains{"DOTTED QUAD OR OTHER"}++;
+    }
+    else {
+#split up the string on "." then put together the last two items to create the domain
+        my @nameSplit        = split( /\./, $hostsToNames{$host} );
+        my $firstPartDomain  = $nameSplit[ $#nameSplit - 1 ];
+        my $secondPartDomain = $nameSplit[$#nameSplit];
+        my $domainString     = $firstPartDomain . "." . $secondPartDomain;
+        $domains{$domainString}++;
+    }
 
     #setup dates hash
     my $date = $+{date};
@@ -99,6 +151,34 @@ while (<ARGV>) {
         }
     }
 
+    #setup referrers hash
+    my $referrer = $+{referrer};
+    if ( $referrer eq "-" ) {
+        $referrers{"NO REFERER"}++;
+    }
+    else {
+        $referrers{$referrer}++;
+    }
+
+    #setup referrerDomains hash
+    if ( $referrer eq "-" ) {
+        $referrerDomains{"NONE"}++;
+    }
+    else {
+        #first section out what I need, should leave no trailing file paths
+        $referrer =~ /\/\/([^\/]*)/;
+        my $sectionedReferrer = $1;
+
+        #split the sectioned referrer on dots to get the last two elements
+        my @splitReferrer = split( /\./, $sectionedReferrer );
+
+        #concat them
+        my $firstPartReferrer  = $splitReferrer[ $#splitReferrer - 1 ];
+        my $secondPartReferrer = $splitReferrer[$#splitReferrer];
+        my $referrerDomain     = $firstPartReferrer . "." . $secondPartReferrer;
+        $referrerDomains{$referrerDomain}++;
+    }
+
     #setup operatingSystems hash
     my $operatingSystem = $+{useragent};
     given ( lc $operatingSystem ) {
@@ -117,24 +197,19 @@ while (<ARGV>) {
     }
 }
 
-#print it
-# my $datesPrint = getHashString(\%dates, "DATES");
-# say "$datesPrint\n\n";
-# my $hoursPrint = getHashString(\%hours, "HOURS");
-# say "$hoursPrint\n\n";
-# my $statusPrint = getHashString(\%statuses, "STATUS CODES");
-# say "$statusPrint\n\n";
-# my $urlPrint = getHashString(\%urls, "URLS");
-# say "$urlPrint\n\n";
-# my $useragentPrint = getHashString(\%useragents, "BROWSERS");
-# say "$useragentPrint\n\n";
-# my $browserFamilyPrint = getHashString(\%browserFamilies, "BROWSER FAMILIES");
-# say "$browserFamilyPrint\n\n";
-# my $operatingSystemsPrint = getHashString(\%operatingSystems, "OPERATING SYSTEMS");
-# say "$operatingSystemsPrint\n\n";
-
 #write it
 open( RESULT, "> output.results" );
+say RESULT ("Web Server Log Analyzer\n");
+printf RESULT ( "Process %d entries from %d files.\n", $count, $argvLength );
+printf RESULT ("Processed the following logfiles:\n");
+foreach my $file (@fileNames) {
+    print RESULT ("$file ");
+}
+printf RESULT ("\n\n");
+my $hostnamePrint = getHashString( \%hostnames, "HOSTNAMES" );
+say RESULT "$hostnamePrint\n\n";
+my $domainPrint = getHashString( \%domains, "DOMAINS" );
+say RESULT "$domainPrint\n\n";
 my $datesPrint = getHashString( \%dates, "DATES" );
 say RESULT "$datesPrint\n\n";
 my $hoursPrint = getHashString( \%hours, "HOURS" );
@@ -149,9 +224,15 @@ my $useragentPrint = getHashString( \%useragents, "BROWSERS" );
 say RESULT "$useragentPrint\n\n";
 my $browserFamilyPrint = getHashString( \%browserFamilies, "BROWSER FAMILIES" );
 say RESULT "$browserFamilyPrint\n\n";
+my $referrerPrint = getHashString( \%referrers, "REFERRERS" );
+say RESULT "$referrerPrint\n\n";
+my $referrerDomainPrint =
+  getHashString( \%referrerDomains, "REFERRERS' DOMAINS" );
+say RESULT "$referrerDomainPrint\n\n";
 my $operatingSystemsPrint =
   getHashString( \%operatingSystems, "OPERATING SYSTEMS" );
 say RESULT "$operatingSystemsPrint\n\n";
+printf RESULT ( "Total bytes served    = %d\n\n", $bytesTotal );
 
 #given a hash and its title, build a string for it and return it
 sub getHashString {
@@ -164,18 +245,8 @@ sub getHashString {
     my $totalHits = getTotalHits(%hash);
     my $hashString;
 
-    #sort here, is there a better way than this if? probably.
-    if (   $title eq "DATES"
-        || $title eq "HOURS"
-        || $title eq "STATUS CODES"
-        || $title eq "URLS"
-        || $title eq "FILE TYPES"
-        || $title eq "BROWSERS"
-        || $title eq "BROWSER FAMILIES"
-        || $title eq "OPERATING SYSTEMS" )
-    {
-        @keys = sort { $a cmp $b } @keys;
-    }
+    #sort here
+    @keys = sort { $a cmp $b } @keys;
 
     $hashString .= sprintf(
 "==============================================================================\n$title\n==============================================================================\n\n"
