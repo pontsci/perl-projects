@@ -3,6 +3,30 @@ use Modern::Perl;
 use Mojolicious::Lite; #a simple Mojolicious app
 get '/' => sub {
   my $self = shift;
+  open(ENTRIES, "< entries.txt");
+
+  #the array to hold all the posts
+  my @posts;
+  #for all lines
+  while(my $line = <ENTRIES>){
+    #split it up
+    my ($timestamp, $ptitle, $blogentry) = split(/\|/, $line);
+    #the post "object"
+    my %post;
+    if($timestamp && $ptitle && $blogentry){
+      $post{"timestamp"} = localtime($timestamp);
+      $post{"ptitle"} = $ptitle;
+      chomp($blogentry);
+      $post{"blogentry"} = $blogentry;
+    }
+    #build the list of posts
+    push(@posts, \%post);
+  }
+  #close it up
+  close(ENTRIES);
+
+  #stash the posts
+  $self->stash(postsarray => \@posts);
   $self->render('main');
 };
 
@@ -15,15 +39,19 @@ get '/links' => sub {
   my $self = shift;
   my %links;
   open( LINKS, "< links.txt" );
+  #for all lines
   while(my $line = <LINKS>){
     #split the data up into name and link
-    my ($name, $link) = split(/\|/ ,$line);
+    my ($name, $link) = split(/\|/, $line);
     #make an entry in the hash for the name=>link, if they were set
     if($name && $link){
       $links{$name} = "$link";
     }
   }
-  #stash it
+  #close it up
+  close(LINKS);
+
+  #stash the hash
   $self->stash(linkhash => \%links);
   $self->render('links');
 };
@@ -39,7 +67,14 @@ __DATA__
 @@ main.html.ep
 % layout 'skeleton';
 % title 'Super Cool Blog!';
-<p>For now, there is nothing here!!! It's the main page!!!</p>
+<h3>Posts</h3>
+% foreach my $post (@$postsarray){
+    <article>
+      <h5><%=%$post{"ptitle"}%></h5>
+      <p><small>Posted on <%=%$post{"timestamp"}%></small></p>
+      <p><%==%$post{"blogentry"}%></p>
+    </article>
+% }
 
 @@ about.html.ep
 % layout 'skeleton';
