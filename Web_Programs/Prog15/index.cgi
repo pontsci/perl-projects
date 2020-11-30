@@ -18,8 +18,10 @@ get '/links' => sub {
   while(my $line = <LINKS>){
     #split the data up into name and link
     my ($name, $link) = split(/\|/ ,$line);
-    #make an entry in the hash for the name=>link
-    $links{$name} = "$link";
+    #make an entry in the hash for the name=>link, if they were set
+    if($name && $link){
+      $links{$name} = "$link";
+    }
   }
   #stash it
   $self->stash(linkhash => \%links);
@@ -51,11 +53,13 @@ __DATA__
 % title 'Links';
 <p>Wow! It's the links page!!!</p>
 <h3>Links to Sites</h3>
+<ul>
 % foreach my $key(sort keys(%$linkhash)){
  <li>
  <a href="<%=%$linkhash{$key}%>" target="_blank"><%= $key%></a>
  </li>
 %}
+</ul>
 
 @@ oops.html.ep
 % layout 'skeleton';
@@ -71,6 +75,8 @@ __DATA__
     <meta charset="utf-8">
   </head>
   <body>
+    <h1>The Blog</h1>
+    <p>This is my super cool blog!</p>
     <a href="<%= url_for('/')%>">Home</a>
     <a href="<%= url_for('/links')%>">Links</a>
     <a href="<%= url_for('/about')%>">About</a>
