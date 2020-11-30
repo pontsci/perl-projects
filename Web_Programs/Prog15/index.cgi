@@ -13,6 +13,16 @@ get '/about' => sub {
 
 get '/links' => sub {
   my $self = shift;
+  my %links;
+  open( LINKS, "< links.txt" );
+  while(my $line = <LINKS>){
+    #split the data up into name and link
+    my ($name, $link) = split(/\|/ ,$line);
+    #make an entry in the hash for the name=>link
+    $links{$name} = "$link";
+  }
+  #stash it
+  $self->stash(linkhash => \%links);
   $self->render('links');
 };
 
@@ -40,6 +50,12 @@ __DATA__
 % layout 'skeleton';
 % title 'Links';
 <p>Wow! It's the links page!!!</p>
+<h3>Links to Sites</h3>
+% foreach my $key(sort keys(%$linkhash)){
+ <li>
+ <a href="<%=%$linkhash{$key}%>" target="_blank"><%= $key%></a>
+ </li>
+%}
 
 @@ oops.html.ep
 % layout 'skeleton';
