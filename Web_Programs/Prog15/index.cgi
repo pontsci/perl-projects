@@ -15,6 +15,12 @@ get '/links' => sub {
   my $self = shift;
   $self->render('links');
 };
+
+any '*' => sub {
+  my $self = shift;
+  $self->rendered(404);
+  $self->render('oops');
+}
 app->start;
 
 __DATA__
@@ -34,6 +40,11 @@ __DATA__
 % layout 'skeleton';
 % title 'Links';
 <p>Wow! It's the links page!!!</p>
+
+@@ oops.html.ep
+% layout 'skeleton';
+% title '404 Error';
+<p>404! Not Found!</p>
 
 @@ layouts/skeleton.html.ep
 <!DOCTYPE html>
