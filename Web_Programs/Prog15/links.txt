@@ -1,0 +1,7 @@
+Lifehacker|http://lifehacker.com/
+Perl|http://perl.org/
+Google News|http://news.google.com/
+HTML5 UP|https://html5up.net/
+Learning Perl 6 Kickstarter|https://www.kickstarter.com/projects/1422827986/learning-perl-6
+CSS Tutorial|http://www.w3schools.com/css/default.asp
+Mojolicious|http://mojolicious.org
