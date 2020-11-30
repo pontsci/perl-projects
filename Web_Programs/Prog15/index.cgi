@@ -33,11 +33,6 @@ __DATA__
 % title 'Links';
 <p>Wow! It's the links page!!!</p>
 
-@@ about.html.ep
-% layout 'skeleton';
-% title 'About';
-<p>This is a boring about page!</p>
-
 @@ layouts/skeleton.html.ep
 <!DOCTYPE html>
 <html>
@@ -46,6 +41,9 @@ __DATA__
     <meta charset="utf-8">
   </head>
   <body>
+    <a href="<%= url_for('/')%>">Home</a>
+    <a href="<%= url_for('/about')%>">About</a>
+    <a href="<%= url_for('/links')%>">Links</a>
     <%= content %>
   </body>
 </html>
