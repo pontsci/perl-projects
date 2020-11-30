@@ -20,7 +20,7 @@ any '*' => sub {
   my $self = shift;
   $self->rendered(404);
   $self->render('oops');
-}
+};
 app->start;
 
 __DATA__
