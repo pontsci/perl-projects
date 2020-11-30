@@ -111,7 +111,7 @@ __DATA__
 @@ oops.html.ep
 % layout 'skeleton';
 % title '404 Error';
-<p>404! Not Found!</p>
+<p class="container">404! Not Found!</p>
 
 @@ layouts/skeleton.html.ep
 <!DOCTYPE html>
