@@ -26,7 +26,9 @@ __DATA__
 @@ about.html.ep
 % layout 'skeleton';
 % title 'About';
-<p>This is a boring about page!</p>
+<p>This page is all about me. I'm a Computer Science major at UNO and I really enjoy programming.</p>
+<p>My favorite thing to do in my free time is play video games or work on my own coding projects. In addition, I like to practice the piano from time to time.</p>
+<p>I recently returned from a year long study abroad in Japan, unfortunately it was only 6 months thanks to the covid-19 pandemic.</p>
 
 @@ links.html.ep
 % layout 'skeleton';
