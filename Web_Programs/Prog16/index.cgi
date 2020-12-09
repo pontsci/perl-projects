@@ -15,6 +15,13 @@ post '/search' => sub {
   $self->render('search');
 };
 
+#a test route for visualization
+get '/search' => sub {
+  my $self = shift;
+
+  $self->render('search');
+};
+
 any '*' => sub {
   my $self = shift;
   $self->rendered(404);
@@ -32,8 +39,7 @@ __DATA__
 <p class="container">The search page</p>
 
 @@ oops.html.ep
-% layout 'skeleton';
-% title '404 Error';
+% layout 'skeleton', title => '404 Error', headerText => '404!';
 <p class="container">404! Not Found!</p>
 
 @@ layouts/skeleton.html.ep
