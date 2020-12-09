@@ -2,9 +2,6 @@
 use Modern::Perl;
 use Mojolicious::Lite; #a simple Mojolicious app
 use DBI;
-
-
-
 get '/' => sub {
   my $self = shift;
   
@@ -16,7 +13,7 @@ post '/search' => sub {
   my $self = shift;
 
   $self->render('search');
-}
+};
 
 any '*' => sub {
   my $self = shift;
