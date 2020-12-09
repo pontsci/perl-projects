@@ -24,19 +24,16 @@ app->start;
 
 __DATA__
 @@ main.html.ep
-% layout 'skeleton';
-% title 'UNO Class Search';
-% header 'UNO Class Search!';
+% layout 'skeleton', title => 'UNO Class Search', headerText => 'UNO Class Search!';
+<p class="container">The main page</p>
 
 @@ search.html.ep
-% layout 'skeleton';
-% title 'Search Results';
-% header 'Search Results!';
+% layout 'skeleton', title => 'Search Results', headerText => 'Search Results!';
+<p class="container">The search page</p>
 
 @@ oops.html.ep
 % layout 'skeleton';
 % title '404 Error';
-% header '404!';
 <p class="container">404! Not Found!</p>
 
 @@ layouts/skeleton.html.ep
@@ -49,7 +46,7 @@ __DATA__
   </head>
   <body>
     <div class="container mb-5">
-    <h2><%= $header%></h2>
+    <h2><%= $headerText%></h2>
       
     </div>
     <%= content %>
