@@ -12,6 +12,12 @@ get '/' => sub {
   $self->render('main');
 };
 
+post '/search' => sub {
+  my $self = shift;
+
+  $self->render('search');
+}
+
 any '*' => sub {
   my $self = shift;
   $self->rendered(404);
@@ -20,9 +26,20 @@ any '*' => sub {
 app->start;
 
 __DATA__
+@@ main.html.ep
+% layout 'skeleton';
+% title 'UNO Class Search';
+% header 'UNO Class Search!';
+
+@@ search.html.ep
+% layout 'skeleton';
+% title 'Search Results';
+% header 'Search Results!';
+
 @@ oops.html.ep
 % layout 'skeleton';
 % title '404 Error';
+% header '404!';
 <p class="container">404! Not Found!</p>
 
 @@ layouts/skeleton.html.ep
@@ -35,7 +52,7 @@ __DATA__
   </head>
   <body>
     <div class="container mb-5">
-    <img src="https://www.amd.com/system/files/2018-11/10788-ryzen-chip-left-angle-960x548.png" alt="cpu" title="cpu">
+    <h2><%= $header%></h2>
       
     </div>
     <%= content %>
